@@ -1,0 +1,915 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.19.1211.1636                               -->
+<workbook original-version='18.1' source-build='2019.4.1 (20194.19.1211.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts ignorable='true' predowngraded='true' />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='FEILD OF STUDY' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;WRITING SCORE&quot;'>
+        <calculation class='tableau' formula='&quot;WRITING SCORE&quot;' />
+        <members>
+          <member value='&quot;MATHSCORE&quot;' />
+          <member value='&quot;READING SCORE&quot;' />
+          <member value='&quot;WRITING SCORE&quot;' />
+        </members>
+      </column>
+      <column caption='YOUR SCORE' datatype='integer' datatype-customized='true' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='38'>
+        <calculation class='tableau' formula='38' />
+        <range max='100' min='1' />
+      </column>
+    </datasource>
+    <datasource caption='Worksheet (StudentsPerformance)' inline='true' name='federated.1xhj94q14ncxh71cl4e4h1bbclbe' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='StudentsPerformance' name='excel-direct.0xrvw6c115agfa1d4vf7h01rjniz'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Admin/Downloads/StudentsPerformance.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0xrvw6c115agfa1d4vf7h01rjniz' name='Worksheet' table='[Worksheet$]' type='table'>
+          <columns gridOrigin='A1:H1001:no:A1:H1001:0' header='yes' outcome='6'>
+            <column datatype='string' name='gender' ordinal='0' />
+            <column datatype='string' name='race/ethnicity' ordinal='1' />
+            <column datatype='string' name='parental level of education' ordinal='2' />
+            <column datatype='string' name='lunch' ordinal='3' />
+            <column datatype='string' name='test preparation course' ordinal='4' />
+            <column datatype='integer' name='math score' ordinal='5' />
+            <column datatype='integer' name='reading score' ordinal='6' />
+            <column datatype='integer' name='writing score' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>race/ethnicity</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[race/ethnicity]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>race/ethnicity</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>parental level of education</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[parental level of education]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>parental level of education</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lunch</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[lunch]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>lunch</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>test preparation course</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[test preparation course]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>test preparation course</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>math score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[math score]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>math score</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reading score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[reading score]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>reading score</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>writing score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[writing score]</local-name>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias>writing score</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Worksheet]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H1001:no:A1:H1001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='SCORE' datatype='integer' name='[Calculation_70650259382382592]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Parameters].[Parameter 1]=&apos;MATHSCORE&apos; THEN [math score]&#13;&#10;ELSEIF  [Parameters].[Parameter 1]=&apos;READINGSCORE&apos; THEN [reading score]&#13;&#10;ELSE[writing score]&#13;&#10;END' />
+      </column>
+      <column caption='FREQUENCY' datatype='integer' name='[Calculation_70650259385319425]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([Calculation_70650259382382592])' />
+      </column>
+      <column caption='HUE' datatype='string' name='[Calculation_70650259386798082]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_70650259382382592]&lt; [Parameters].[Parameter 2] THEN &apos;Color A&apos;&#13;&#10;ELSEIF [Calculation_70650259382382592]= [Parameters].[Parameter 2] THEN &apos;Color B&apos;&#13;&#10;ELSE &apos;Color C&apos;&#13;&#10;END' />
+      </column>
+      <column caption='COMPARATION' datatype='real' name='[Calculation_70650259438686211]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(IF [Calculation_70650259382382592]&lt; [Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE NULL&#13;&#10;END)/COUNT([Calculation_70650259382382592])' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Lunch' datatype='string' name='[lunch]' role='dimension' type='nominal' />
+      <column caption='Math Score' datatype='integer' name='[math score]' role='measure' type='quantitative' />
+      <column caption='Parental Level Of Education' datatype='string' name='[parental level of education]' role='dimension' type='nominal' />
+      <column caption='Race/Ethnicity' datatype='string' name='[race/ethnicity]' role='dimension' type='nominal' />
+      <column caption='Reading Score' datatype='integer' name='[reading score]' role='measure' type='quantitative' />
+      <column caption='Test Preparation Course' datatype='string' name='[test preparation course]' role='dimension' type='nominal' />
+      <column caption='Writing Score' datatype='integer' name='[writing score]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_70650259386798082]' derivation='None' name='[none:Calculation_70650259386798082:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.496703' measure-ordering='alphabetic' measure-percentage='0.410989' parameter-percentage='0.0923077' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Calculation_70650259386798082:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Color A&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Color C&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Color B&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='FEILD OF STUDY' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;WRITING SCORE&quot;'>
+          <calculation class='tableau' formula='&quot;WRITING SCORE&quot;' />
+        </column>
+        <column caption='YOUR SCORE' datatype='integer' datatype-customized='true' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='38'>
+          <calculation class='tableau' formula='38' />
+          <range max='100' min='1' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='FIELD'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='16'>STUDENT &lt;</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='16'>[Parameters].[Parameter 1]</run>
+            <run bold='true' fontalignment='1' fontcolor='#000000' fontname='Tableau Regular' fontsize='16'>&gt; DISTRIBUTION</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Worksheet (StudentsPerformance)' name='federated.1xhj94q14ncxh71cl4e4h1bbclbe' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='FEILD OF STUDY' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;WRITING SCORE&quot;'>
+              <calculation class='tableau' formula='&quot;WRITING SCORE&quot;' />
+            </column>
+            <column caption='YOUR SCORE' datatype='integer' datatype-customized='true' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='38'>
+              <calculation class='tableau' formula='38' />
+              <range max='100' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1xhj94q14ncxh71cl4e4h1bbclbe'>
+            <column caption='SCORE' datatype='integer' name='[Calculation_70650259382382592]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1]=&apos;MATHSCORE&apos; THEN [math score]&#13;&#10;ELSEIF  [Parameters].[Parameter 1]=&apos;READINGSCORE&apos; THEN [reading score]&#13;&#10;ELSE[writing score]&#13;&#10;END' />
+            </column>
+            <column caption='FREQUENCY' datatype='integer' name='[Calculation_70650259385319425]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([Calculation_70650259382382592])' />
+            </column>
+            <column caption='HUE' datatype='string' name='[Calculation_70650259386798082]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_70650259382382592]&lt; [Parameters].[Parameter 2] THEN &apos;Color A&apos;&#13;&#10;ELSEIF [Calculation_70650259382382592]= [Parameters].[Parameter 2] THEN &apos;Color B&apos;&#13;&#10;ELSE &apos;Color C&apos;&#13;&#10;END' />
+            </column>
+            <column caption='Math Score' datatype='integer' name='[math score]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_70650259382382592]' derivation='None' name='[none:Calculation_70650259382382592:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_70650259386798082]' derivation='None' name='[none:Calculation_70650259386798082:nk]' pivot='key' type='nominal' />
+            <column caption='Reading Score' datatype='integer' name='[reading score]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_70650259385319425]' derivation='User' name='[usr:Calculation_70650259385319425:qk]' pivot='key' type='quantitative' />
+            <column caption='Writing Score' datatype='integer' name='[writing score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <encodings>
+              <color column='[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[none:Calculation_70650259386798082:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5' />
+                <format attr='mark-color' value='#000000' />
+                <format attr='mark-transparency' value='155' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[usr:Calculation_70650259385319425:qk]</rows>
+        <cols>[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[none:Calculation_70650259382382592:qk]</cols>
+      </table>
+      <simple-id uuid='{640DF178-0DE9-47B4-A483-565093BD4C14}' />
+    </worksheet>
+    <worksheet name='PERCENTAGE'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Worksheet (StudentsPerformance)' name='federated.1xhj94q14ncxh71cl4e4h1bbclbe' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='FEILD OF STUDY' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;WRITING SCORE&quot;'>
+              <calculation class='tableau' formula='&quot;WRITING SCORE&quot;' />
+            </column>
+            <column caption='YOUR SCORE' datatype='integer' datatype-customized='true' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='38'>
+              <calculation class='tableau' formula='38' />
+              <range max='100' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1xhj94q14ncxh71cl4e4h1bbclbe'>
+            <column caption='SCORE' datatype='integer' name='[Calculation_70650259382382592]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Parameters].[Parameter 1]=&apos;MATHSCORE&apos; THEN [math score]&#13;&#10;ELSEIF  [Parameters].[Parameter 1]=&apos;READINGSCORE&apos; THEN [reading score]&#13;&#10;ELSE[writing score]&#13;&#10;END' />
+            </column>
+            <column caption='COMPARATION' datatype='real' name='[Calculation_70650259438686211]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(IF [Calculation_70650259382382592]&lt; [Parameters].[Parameter 2] THEN 1&#13;&#10;ELSE NULL&#13;&#10;END)/COUNT([Calculation_70650259382382592])' />
+            </column>
+            <column caption='Math Score' datatype='integer' name='[math score]' role='measure' type='quantitative' />
+            <column caption='Reading Score' datatype='integer' name='[reading score]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_70650259438686211]' derivation='User' name='[usr:Calculation_70650259438686211:qk]' pivot='key' type='quantitative' />
+            <column caption='Writing Score' datatype='integer' name='[writing score]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[usr:Calculation_70650259438686211:qk]' value='p0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[usr:Calculation_70650259438686211:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='18'>&lt;</run>
+                <run bold='true' fontsize='18'>[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[usr:Calculation_70650259438686211:qk]</run>
+                <run bold='true' fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9C82E881-0262-41A8-9AA9-33605AC57DBA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#aa0000' fontname='Tableau Regular'>STUDENT&apos;S PERFORMANCE </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource name='Parameters' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='FEILD OF STUDY' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;WRITING SCORE&quot;'>
+          <calculation class='tableau' formula='&quot;WRITING SCORE&quot;' />
+          <members>
+            <member value='&quot;MATHSCORE&quot;' />
+            <member value='&quot;READING SCORE&quot;' />
+            <member value='&quot;WRITING SCORE&quot;' />
+          </members>
+        </column>
+        <column caption='YOUR SCORE' datatype='integer' datatype-customized='true' name='[Parameter 2]' param-domain-type='range' role='measure' type='quantitative' value='38'>
+          <calculation class='tableau' formula='38' />
+          <range max='100' min='1' />
+        </column>
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='10' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' param='vert' type='layout-flow' w='84400' x='800' y='1000'>
+              <zone fixed-size='52' h='7500' id='7' is-fixed='true' type='title' w='84400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='90500' id='6' type='layout-basic' w='84400' x='800' y='8500'>
+                <zone h='80750' id='8' name='FIELD' w='84400' x='800' y='18250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='9750' id='14' param='vert' type='layout-flow' w='84400' x='800' y='8500' />
+              </zone>
+            </zone>
+            <zone fixed-size='140' h='98000' id='9' is-fixed='true' param='vert' type='layout-flow' w='14000' x='85200' y='1000'>
+              <zone h='6500' id='12' mode='compact' param='[Parameters].[Parameter 1]' type='paramctrl' w='14000' x='85200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9375' id='13' mode='slider' param='[Parameters].[Parameter 2]' type='paramctrl' w='14000' x='85200' y='7500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='4125' id='15' type='text' w='29600' x='600' y='8250'>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Regular' fontsize='18'>YOUR SCORE DEFEAT </run>
+          </formatted-text>
+        </zone>
+        <zone h='9875' id='16' name='PERCENTAGE' show-title='false' w='9300' x='30500' y='8125' />
+        <zone h='4375' id='23' type='text' w='39400' x='39900' y='8750'>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Regular' fontsize='18'>OF OTHER STUDENT&apos;S SCORE</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#aa0000' fontname='Tableau Regular'>STUDENT&apos;S PERFORMANCE </run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='750' minheight='750' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='31' type='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='30' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='52' h='7500' id='7' type='title' w='84400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6500' id='12' mode='compact' param='[Parameters].[Parameter 1]' type='paramctrl' w='14000' x='85200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9375' id='13' mode='slider' param='[Parameters].[Parameter 2]' type='paramctrl' w='14000' x='85200' y='7500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='79' h='9875' id='16' is-fixed='true' name='PERCENTAGE' show-title='false' w='9300' x='30500' y='8125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4125' id='15' type='text' w='29600' x='600' y='8250'>
+                  <formatted-text>
+                    <run bold='true' fontname='Tableau Regular' fontsize='18'>YOUR SCORE DEFEAT </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4375' id='23' type='text' w='39400' x='39900' y='8750'>
+                  <formatted-text>
+                    <run bold='true' fontname='Tableau Regular' fontsize='18'>OF OTHER STUDENT&apos;S SCORE</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='80750' id='8' is-fixed='true' name='FIELD' w='84400' x='800' y='18250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F26F275A-8034-4D85-AD0A-E39C5D0D24E4}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='FIELD'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='slider' param='[Parameters].[Parameter 2]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[none:Calculation_70650259386798082:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1xhj94q14ncxh71cl4e4h1bbclbe].[none:Calculation_70650259386798082:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DB4B0B46-D82B-431F-804A-C7CF99D0F9A6}' />
+    </window>
+    <window class='worksheet' name='PERCENTAGE'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{616D53F0-7F2B-4AD9-A183-EB32AB713DA7}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='FIELD'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='PERCENTAGE' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{FA99EEEC-1F9B-4E9F-8887-BB95AC2F08C5}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      gg==
+    </thumbnail>
+    <thumbnail height='192' name='FIELD' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='37' name='PERCENTAGE' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAlCAYAAADyUO83AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAEVUlEQVRoge2YUUhbVxjHfx33bXnwQQL1IQ95yEMe+tBzaYIp6JoLiw9jpXOy0tatbvNB
+      wZWu2wLK6qhQB84xEcE8BJrRUjqhdqzQDcGsqGQSBpMtsJTeSmhtlxUqLCuKF749JE6NRm3l
+      cjuW39Ph3v/57nf++fKdc+8+ERH+x7zkdAJOUzXA6QScpmqA0wk4TdUApxNwmqoBTifgNFUD
+      nE7AaaoGOJ2A01QNcDoBp6kaYG94i/u3Y3x8MkxI19F1nVD4Dd7rv8n8cqUpj5mNdaHrQRpe
+      7yI2+xirUvjCBNFGHd34jOlK8XZgn31fhBaZ7nuHD8fvb72AGoO+q31EarUNcyaizUQnFtcL
+      MfrH6DdqygJYzA0eo+3KUyID4/Q1up4vTbGJJ9c7JaCUKFUvp76alodLIiJL8nB6VN4PK1FK
+      SeD4qPy+sjZnZapXGpQSFf5ERJbk3jddElZKVEOvTK2UPeDuqLyplIS7J+WvPeRpjwErU9Lb
+      UFzkVgmu/PKFvKaUKBWQrm/X7k52B0QpJacv/1G68kAunSrquifXR3gi1zsDosLdMrmX1YuI
+      PT0gPclkAcBPa0cj5cWpHXiLZj+AxfT3ExQAyGGaFuBB190lZR3BoAewMM3cv/Ot1DDDKRdG
+      9BzPW/mr2GLA3MxMcVGeIMG6rRR1NDb6isN0mvQzRTeJD46DESW6qS88O7YYkM/niwOfD18F
+      jcfjKQ6sLFkTwIPXqwE5MplCSbVAKpUDXPj9Rf3i+CDxfCPnogZ7X74tBpiYZnHkcm1Tn14v
+      3rJLh5uacAGp4T5gmfmxz0lkgBoDQwcKSQaGf+VwtIdIDSzP3+T86hYbCnPy/DbbawVeqIOQ
+      FjpPMnWLkZan6HoDb38ttMQmSE/0oJsjtBgJ/IkkA5GnJFp1Qs0XuFP/JT+k0qRuXOTgnQs0
+      h4K0X8vv+pk2GODFW/ppC4VCZZlpYm51XavlUPsQ6XSKH28M0X6wBqwssZ44Sy1naKkD8kmS
+      GcDdQrTjAC9roNUeoquzCRcWP98u9aBdYEsFuN2lLp7Nkq2gyeVKXV3z4Sv/L2zAIhvrIZ43
+      6Go/gAaQyZAB8Pvxr1Nq+/fjBsjn2W0N2GKAPxAobn25FKmFrRQLJJMla3QdfZtYVjZGTzxH
+      8EwUY49b3lbYYoAWMHjFBZAhMZLcVI7W3FXGMgAaoVeNTeeENWGx9E1vG2ePruv5qw10tRJW
+      5aZJDsDtxs3usKcJaiE+OBNEAxZvddMxNMOjZYBlHs3E6Dh7hQVA87XR2VRp+RbZeC8Js4aj
+      Z9s27hieCBE/kL9G/8gcf1tgPZ5lKJ7E2snUMhx9Geof66fSWcbKxmhtjbFwuI/xgcimPX/1
+      frYsuOZrJ5Fox6exO/Z2kt6JFfnzp0vy0YkjUq+K7wb1R47Juxe/k3tL288cPR4QFTgtlx9U
+      1iz9dm0tdv0ROfHpznHLsbEC/hu8UAchJ6ga4HQCTvMPbQHhy7sXoRwAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
